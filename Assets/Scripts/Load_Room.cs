@@ -12,7 +12,7 @@ public class Load_Room : MonoBehaviour {
 
     public Text screen;         //Computerscreen wird genutzt um den Text der ausgewählten Diskette anzuzeigen.
     public AudioSource source;  //Spielt den Diskettenladesound ab.
-    public GameObject ejectButton;
+    //public GameObject ejectButton;
 
     private Boolean move;
     private Boolean ejectable;
