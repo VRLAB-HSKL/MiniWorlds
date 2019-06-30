@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HTC.UnityPlugin.Vive;
+using UnityEngine.SceneManagement;
 
 public class Flying : MonoBehaviour
 {
     public GameObject head;
     public GameObject rightHand;
     public int speed;
+    private Scene scene;
 
     // Use this for initialization
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
     }
 
     private void Awake()
@@ -40,6 +43,24 @@ public class Flying : MonoBehaviour
     void Update()
     {
         if (ViveInput.GetPress(HandRole.RightHand, ControllerButton.FullTrigger) || ViveInput.GetPress(HandRole.LeftHand, ControllerButton.FullTrigger)) flying();
+
+        if(ViveInput.GetPress(HandRole.RightHand, ControllerButton.Menu))
+        {
+         
+             if (scene.name == "MainRoom")
+             {
+              Application.Quit();
+                //Wird genutzt um die Applikation zu beenden, wenn diese aus Unity heraus gestartet wird.
+                 #if UNITY_EDITOR
+                 UnityEditor.EditorApplication.isPlaying = false;
+                 #endif
+             }
+             else
+             {
+                SceneManager.LoadScene("MainRoom");
+             }
+        
+        }
     }
 
     private void flying()
