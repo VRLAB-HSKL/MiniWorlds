@@ -7,7 +7,7 @@ using UnityEngine;
 /// Abgewandelte Klasse zum Darstellen eines Drückbaren Buttons.
 /// Grundlegend war das Skript "ResetButton" im VIU Beispiel "Collider Event".
 /// </summary>
-public class MainRoomButtonScript : MonoBehaviour
+public class ResetButtonScript : MonoBehaviour
     , IColliderEventPressUpHandler
     , IColliderEventPressEnterHandler
     , IColliderEventPressExitHandler
@@ -60,9 +60,7 @@ public class MainRoomButtonScript : MonoBehaviour
         //Nur der Trigger löst die gewünschte Aktion aus.
         if (eventData.button.ToString().Equals("Trigger"))
         {
-            if (GameObject.Find("PlayButton").activeSelf == true) { GameObject.Find("Laufwerk").GetComponent<Load_Room>().loadRoom(); }
-
-            if(GameObject.Find("ResetButton").activeSelf == true) { GameObject.Find("ResetButton").GetComponent<resetDiscs>().resetAllDiscs(); }
+            GameObject.Find("ResetButton").GetComponent<resetDiscs>().resetAllDiscs();
         }
     }
 

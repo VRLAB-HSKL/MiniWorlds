@@ -2760,7 +2760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screen: {fileID: 1769170617}
   source: {fileID: 607470444}
-  ejectButton: {fileID: 2112258230}
 --- !u!54 &1098796007
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3160,11 +3159,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1228358628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79dd4533a5dd1054dac6d380287601af, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d1703d2622fe804b87f268681dab2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonObject: {fileID: 1228358629}
-  buttonDownDisplacement: {x: 0, y: -1, z: 0}
+  buttonDownDisplacement: {x: 0, y: 0, z: 0}
   m_activeButton: 0
 --- !u!136 &1228358632
 CapsuleCollider:
