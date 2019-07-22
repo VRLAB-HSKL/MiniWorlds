@@ -12,7 +12,7 @@ public class Exit_Teleport : MonoBehaviour {
     **/
     void Start () {
         scene = SceneManager.GetActiveScene(); //Abfragen der aktuell geladenen Szene
-        sphereCollider = GameObject.Find("ViveRig").GetComponent<SphereCollider>();
+        //sphereCollider = GameObject.Find("ViveRig").GetComponent<SphereCollider>();
     }
 
     /**
