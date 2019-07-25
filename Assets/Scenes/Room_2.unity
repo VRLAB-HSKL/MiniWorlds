@@ -3788,6 +3788,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbfd31aaac017204885fcc03f0579a1a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1106258588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195354, guid: cbfd31aaac017204885fcc03f0579a1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1106258587}
 --- !u!1 &1127992104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5333,11 +5338,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1719067061}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1742423542 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 125382, guid: cbfd31aaac017204885fcc03f0579a1a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1106258587}
 --- !u!1 &1742597764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6118,7 +6118,7 @@ MonoBehaviour:
   mySphere: {fileID: 1705389974}
   myCylinder: {fileID: 1483679128}
   head: {fileID: 2009127376}
-  rightHand: {fileID: 1742423542}
+  rightHand: {fileID: 1106258588}
   objectContainer: {fileID: 543702001}
 --- !u!1 &2008703926
 GameObject:
