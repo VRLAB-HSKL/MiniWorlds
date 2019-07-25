@@ -113,6 +113,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &22235983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 125382, guid: cbfd31aaac017204885fcc03f0579a1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1106258587}
+--- !u!114 &22235984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22235983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6d1c1b0517453489c30f25fa81cd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  myBlock: {fileID: 995347263}
+  mySphere: {fileID: 1705389974}
+  myCylinder: {fileID: 1483679128}
+  head: {fileID: 2009127376}
+  rightHand: {fileID: 1106258588}
+  objectContainer: {fileID: 543702001}
 --- !u!1 &39494479
 GameObject:
   m_ObjectHideFlags: 0
@@ -6097,29 +6120,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 498762, guid: cbfd31aaac017204885fcc03f0579a1a,
     type: 2}
   m_PrefabInternal: {fileID: 1106258587}
---- !u!1 &2008363998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 196232, guid: cbfd31aaac017204885fcc03f0579a1a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1106258587}
---- !u!114 &2008364000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2008363998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca1a6e4ca6b709e40af47d3cbc197f72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  myBlock: {fileID: 995347263}
-  mySphere: {fileID: 1705389974}
-  myCylinder: {fileID: 1483679128}
-  head: {fileID: 2009127376}
-  rightHand: {fileID: 1106258588}
-  objectContainer: {fileID: 543702001}
 --- !u!1 &2008703926
 GameObject:
   m_ObjectHideFlags: 0
