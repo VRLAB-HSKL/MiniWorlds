@@ -35,25 +35,48 @@ public class BlockSpawn : MonoBehaviour
         selectedObject = 0;
     }
 
+    private void Awake()
+    {
+        ViveInput.AddListenerEx(HandRole.RightHand, ControllerButton.Grip, ButtonEventType.Down, spawnObject);
+        ViveInput.AddListenerEx(HandRole.RightHand, ControllerButton.Menu, ButtonEventType.Down, switchObject);
+    }
+
+    private void OnDestroy()
+    {
+        ViveInput.RemoveListenerEx(HandRole.RightHand, ControllerButton.Grip, ButtonEventType.Down, spawnObject);
+        ViveInput.RemoveListenerEx(HandRole.RightHand, ControllerButton.Menu, ButtonEventType.Down, switchObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (ViveInput.GetPress(HandRole.RightHand, ControllerButton.Grip))
-        {
-            GameObject newObject = Instantiate(myObjects[selectedObject]) as GameObject; ;
-            objectName = "Object_" + objectCounter;
-            newObject.name = objectName;
-            newObject.transform.position = rightHand.transform.position;
-            newObject.transform.position += new Vector3(0, 0.1F, 0);
+        // if (ViveInput.GetPress(HandRole.RightHand, ControllerButton.Grip))
+        // {
 
-            newObject.transform.parent = objectContainer.transform;
-            objectCounter++;
-        }
+    }
 
-        if (ViveInput.GetPress(HandRole.RightHand, ControllerButton.Menu))
-        {
-            if (selectedObject == 2) selectedObject = 0;
-            else selectedObject++;
-        }
+    //if (ViveInput.GetPress(HandRole.RightHand, ControllerButton.Menu))
+    //{
+    //   if (selectedObject == 2) selectedObject = 0;
+    //   else selectedObject++;
+    //}
+    //}
+
+    private void spawnObject()
+    {
+        GameObject newObject = Instantiate(myObjects[selectedObject]) as GameObject; ;
+        objectName = "Object_" + objectCounter;
+        newObject.name = objectName;
+        newObject.transform.position = rightHand.transform.position;
+        newObject.transform.position += new Vector3(0, 0.1F, 0);
+
+        newObject.transform.parent = objectContainer.transform;
+        objectCounter++;
+    }
+
+    private void switchObject()
+    {
+        if (selectedObject == 2) selectedObject = 0;
+        else selectedObject++;
     }
 }
