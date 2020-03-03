@@ -77,6 +77,6 @@ public class BlockSpawn : MonoBehaviour
     private void switchObject()
     {
         if (selectedObject == 2) selectedObject = 0;
-        else selectedObject++;
+        else selectedObject++;        
     }
 }
